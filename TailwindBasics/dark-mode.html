@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"> </script>
+    </script>
+    <script>
+        tailwind.config =
+        {
+            darkMode: 'class'
+        }
+    </script>
+
+    <style>
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #68d391;
+        }
+
+        .toggle-checkbox:checked+.toggle-label {
+            background-color: #68d391;
+        }
+    </style>
+    <title>Dark Mode</title>
+</head>
+
+<body>
+
+    <div class="container mx-auto mt-10 bg-white dark:bg-slate-800 rounded-xl px-6 py-8 shadow-xl">
+        <h3 class="text-slate-800 dark:text-white font-medium tracking-tight">
+            Lorem ipsum dolor sit amet.
+        </h3>
+        <p class="text-slate-500 dark:text-slate-300 mt-2 text-sm">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum cupiditate quis recusandae officiis,
+            accusamus vitae repellat quibusdam consequatur suscipit omnis nisi eaque enim doloribus sed.
+        </p>
+
+
+        <style>
+            .toggle-checkbox:checked {
+                @apply: right-0 border-green-400;
+                right: 0;
+                border-color: #68D391;
+            }
+
+            .toggle-checkbox:checked+.toggle-label {
+                @apply: bg-green-400;
+                background-color: #68D391;
+            }
+        </style>
+
+        <div
+            class="relative inline-block w-10 mr-2 ml-4  mt-6 align-middle select-none transition duration-200 ease-in">
+            <input type="checkbox" name="toggle" id="toggle"
+                class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer" />
+            <label for="toggle"
+                class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+        </div>
+        <label for="toggle" class="text-xs text-gray-700 mt-6 ">Dark Mode</label>
+
+
+
+
+
+    </div>
+
+
+
+
+
+    <div class=" justify-center flex mt-60 m-2 p-2">
+        <a class="rounded-xl border bg-blue-400
+        px-6 py-4 text-center justify-center
+        flex content-center mt-36 max-w-xs" href="./index.html">Home</a>
+    </div>
+
+    <script>
+        document.getElementById('toggle').addEventListener('change', function () {
+            if (this.checked) {
+                document.documentElement.classList.add('dark');
+            }
+            else {
+                document.documentElement.classList.remove('dark');
+
+            }
+
+        })
+    </script>
+</body>
+
+</html>

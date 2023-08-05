@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config =
+        {
+            theme:
+            {
+                extend:
+                {
+                    transitionDuration:
+                    {
+                        2000: '2000ms'
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Transform</title>
+</head>
+
+<body>
+
+    <!-- No transition -->
+    <button class="px-8 py-3 text-white bg-blue-300 rounded hover:bg-blue-800 m-8">
+        Bana Tıkla
+    </button>
+
+    <!-- Transition -->
+
+    <button class=" transition duration-700 px-8 py-3 text-white bg-blue-300 rounded hover:bg-blue-800 m-8">
+        Bana Tıkla
+    </button>
+
+    <!-- Transition & transform -->
+
+    <button
+        class="hover:rotate-12  transition duration-700 px-8 py-3 text-white bg-blue-400 rounded hover:bg-blue-900 m-8">
+        Bana Tıkla
+    </button>
+
+    <img src="image/americanphysco.jpg"
+        class="w-48 hover:rotate-90 hover:scale-95 hover:skew-x-6 transition duration-2000 ml-36  ">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class=" justify-center flex mt-60 m-2 p-2">
+        <a class="rounded-xl border bg-blue-400
+        px-6 py-4 text-center justify-center
+        flex content-center mt-36 max-w-xs" href="./index.html">Home</a>
+    </div>
+</body>
+
+</html>
